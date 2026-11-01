@@ -1,0 +1,6 @@
+name,amount_pence
+bank_opening,1000000
+bank_closing,671735
+cashbook_opening,1000000
+cashbook_closing,753600
+expected_adjusted_balance,696735

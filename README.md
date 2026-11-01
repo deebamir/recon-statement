@@ -21,7 +21,7 @@ Every match will record the rule that produced it and a confidence score, so the
 | Phase | What | Status |
 |---|---|---|
 | 1 | Project structure, money helpers, data models, UK/US terms config | Done |
-| 2 | Mock data generator with planted errors | Planned |
+| 2 | Mock data generator with planted errors | Done |
 | 3 | Matching engine | Planned |
 | 4 | Statement generator and Excel output | Planned |
 | 5 | Batch payment matcher | Planned |
@@ -34,6 +34,7 @@ Every match will record the rule that produced it and a confidence score, so the
 - `money.py`: converts amounts to whole **integer pence** and back (12.34 is stored as 1234), so there are no floating-point rounding errors.
 - `models.py`: the `Transaction` and `Match` objects.
 - `config.py`: UK and US wording for the statement labels.
+- `generator.py`: writes mock bank and cashbook files (with planted errors and an answer key) to `data/sample/`. 
 
 ## How to run
 

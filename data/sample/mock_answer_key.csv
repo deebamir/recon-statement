@@ -1,0 +1,15 @@
+category,bank_ids,cashbook_ids,note
+exact_match,BK01,CB01,same amount and reference
+exact_match,BK02,CB02,same amount and reference
+exact_match,BK03,CB03,bank is 1 day later
+exact_match,BK04,CB04,bank is 2 days later
+batch_payment,BK05,CB05|CB06|CB07,3 wages add up to 3000.00
+possible_duplicate,BK06,CB08|CB09,CB09 is the duplicate
+transposed_digits,BK07,CB10,"45.00 in bank, 54.00 in cashbook"
+reversed_sign,BK08,CB11,"bank paid 90.00, cashbook shows +90.00"
+direct_debit,BK09,,"on bank only, not in cashbook"
+dishonoured_cheque,BK10,,"on bank only, not in cashbook"
+missing_bank_charge,BK11,,"on bank only, not in cashbook"
+bank_interest,BK12,,"on bank only, not in cashbook"
+unpresented_cheque,,CB12,"in cashbook, not yet on bank"
+outstanding_lodgement,,CB13,"in cashbook, not yet on bank"
