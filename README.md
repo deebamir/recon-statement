@@ -22,7 +22,7 @@ Every match will record the rule that produced it and a confidence score, so the
 |---|---|---|
 | 1 | Project structure, money helpers, data models, UK/US terms config | Done |
 | 2 | Mock data generator with planted errors | Done |
-| 3 | Matching engine | Planned |
+| 3 | Matching engine | Done |
 | 4 | Statement generator and Excel output | Planned |
 | 5 | Batch payment matcher | Planned |
 | 6 | Exception triage and ageing report | Planned |
@@ -35,6 +35,8 @@ Every match will record the rule that produced it and a confidence score, so the
 - `models.py`: the `Transaction` and `Match` objects.
 - `config.py`: UK and US wording for the statement labels.
 - `generator.py`: writes mock bank and cashbook files (with planted errors and an answer key) to `data/sample/`. 
+- `loader.py`: reads the CSV files into `Transaction` objects.
+- `matcher.py`: pairs bank and cashbook lines one to one using ordered rules, recording the rule, a confidence score and a plain-English reason for every match.
 
 ## How to run
 
