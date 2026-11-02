@@ -1,7 +1,28 @@
 TERMS = {
-    "UK": {"unpresented": "Unpresented cheques",
-           "outstanding_deposits": "Outstanding lodgements"},
-    "US": {"unpresented": "Outstanding checks",
-           "outstanding_deposits": "Deposits in transit"},
+    "UK": {
+        "title": "Bank Reconciliation Statement",
+        "cashbook_balance": "Balance per cashbook",
+        "bank_balance": "Balance per bank statement",
+        "unpresented": "Unpresented cheques",
+        "outstanding_deposits": "Outstanding lodgements",
+        "bank_charges": "Bank charges",
+        "bank_interest": "Bank interest",
+        "direct_debits": "Direct debits",
+        "dishonoured": "Dishonoured cheques",
+        "adjusted_cashbook": "Adjusted cashbook balance",
+        "adjusted_bank": "Adjusted bank balance",
+    },
+    "US": {
+        "title": "Bank Reconciliation",
+        "cashbook_balance": "Balance per books",
+        "bank_balance": "Balance per bank statement",
+        "unpresented": "Outstanding checks",
+        "outstanding_deposits": "Deposits in transit",
+        "bank_charges": "Bank service charges",
+        "bank_interest": "Interest earned",
+        "direct_debits": "Automatic debits (ACH)",
+        "dishonoured": "NSF (returned) checks",
+        "adjusted_cashbook": "Adjusted book balance",
+        "adjusted_bank": "Adjusted bank balance",
+    },
 }
-

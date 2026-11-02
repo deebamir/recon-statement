@@ -23,7 +23,7 @@ Every match will record the rule that produced it and a confidence score, so the
 | 1 | Project structure, money helpers, data models, UK/US terms config | Done |
 | 2 | Mock data generator with planted errors | Done |
 | 3 | Matching engine | Done |
-| 4 | Statement generator and Excel output | Planned |
+| 4 | Statement generator and Excel output | Done |
 | 5 | Batch payment matcher | Planned |
 | 6 | Exception triage and ageing report | Planned |
 | 7 | Tests and GitHub Actions | Planned |
@@ -37,6 +37,7 @@ Every match will record the rule that produced it and a confidence score, so the
 - `generator.py`: writes mock bank and cashbook files (with planted errors and an answer key) to `data/sample/`. 
 - `loader.py`: reads the CSV files into `Transaction` objects.
 - `matcher.py`: pairs bank and cashbook lines one to one using ordered rules, recording the rule, a confidence score and a plain-English reason for every match.
+- `statement.py`: builds the two-sided bank reconciliation statement (UK or US wording), flags any difference between the two adjusted balances, and exports it to Excel with a sign-off block.
 
 ## How to run
 
