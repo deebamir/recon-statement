@@ -24,8 +24,8 @@ Every match will record the rule that produced it and a confidence score, so the
 | 2 | Mock data generator with planted errors | Done |
 | 3 | Matching engine | Done |
 | 4 | Statement generator and Excel output | Done |
-| 5 | Batch payment matcher | Planned |
-| 6 | Exception triage and ageing report | Done |
+| 5 | Batch payment matcher | Done |
+| 6 | Exception triage and ageing report | Planned |
 | 7 | Tests and GitHub Actions | Planned |
 | 8 | Documentation and release v0.1.0 | Planned |
 
