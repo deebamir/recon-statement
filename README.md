@@ -25,7 +25,7 @@ Every match will record the rule that produced it and a confidence score, so the
 | 3 | Matching engine | Done |
 | 4 | Statement generator and Excel output | Done |
 | 5 | Batch payment matcher | Done |
-| 6 | Exception triage and ageing report | Planned |
+| 6 | Exception triage and ageing report | Done |
 | 7 | Tests and GitHub Actions | Planned |
 | 8 | Documentation and release v0.1.0 | Planned |
 
@@ -39,6 +39,7 @@ Every match will record the rule that produced it and a confidence score, so the
 - `matcher.py`: pairs bank and cashbook lines one to one using ordered rules, recording the rule, a confidence score and a plain-English reason for every match.
 - `statement.py`: builds the two-sided bank reconciliation statement (UK or US wording), flags any difference between the two adjusted balances, and exports it to Excel with a sign-off block.
 - `batch.py`: finds several cashbook lines that add up to one bank line (payroll runs, BACS and ACH batches), within a date window and with safety caps so the search stays fast.
+- `triage.py`: explains every unmatched item (timing difference, missing bank charge, possible duplicate, transposed digits, reversed sign), with a confidence score, a plain-English reason and a suggested journal entry, and prints an ageing report of unreconciled items.
 
 ## How to run
 
