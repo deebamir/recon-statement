@@ -16,6 +16,7 @@ from pathlib import Path
 from openpyxl import Workbook
 from openpyxl.styles import Font
 
+from recon_statement.batch import find_batch_matches
 from recon_statement.config import TERMS
 from recon_statement.loader import load_transactions
 from recon_statement.matcher import find_matches
@@ -63,6 +64,7 @@ class Statement:
 def build_statement(bank_lines, book_lines, bank_balance, cashbook_balance,
                     period_end=PERIOD_END):
     matches, left_bank, left_book = find_matches(bank_lines, book_lines)
+    batch_matches, left_bank, left_book, skipped = find_batch_matches(left_bank, left_book)
 
     cashbook_items = []
     unresolved_bank = []
