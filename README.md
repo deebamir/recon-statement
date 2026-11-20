@@ -1,4 +1,6 @@
-# recon-statement
+# recon-statement 
+
+![tests](https://github.com/deebamir/recon-statement/actions/workflows/tests.yml/badge.svg)
 
 Python tool that matches bank statement lines to cashbook lines and produces the formal **bank reconciliation statement** used in UK and US accounting, proving the difference is nil.
 
@@ -26,7 +28,7 @@ Every match will record the rule that produced it and a confidence score, so the
 | 4 | Statement generator and Excel output | Done |
 | 5 | Batch payment matcher | Done |
 | 6 | Exception triage and ageing report | Done |
-| 7 | Tests and GitHub Actions | Planned |
+| 7 | Tests and GitHub Actions | Done |
 | 8 | Documentation and release v0.1.0 | Planned |
 
 ## What exists today
@@ -40,6 +42,7 @@ Every match will record the rule that produced it and a confidence score, so the
 - `statement.py`: builds the two-sided bank reconciliation statement (UK or US wording), flags any difference between the two adjusted balances, and exports it to Excel with a sign-off block.
 - `batch.py`: finds several cashbook lines that add up to one bank line (payroll runs, BACS and ACH batches), within a date window and with safety caps so the search stays fast.
 - `triage.py`: explains every unmatched item (timing difference, missing bank charge, possible duplicate, transposed digits, reversed sign), with a confidence score, a plain-English reason and a suggested journal entry, and prints an ageing report of unreconciled items.
+- `tests/`: 34 automated pytest tests that check the matching, the batch matcher, the statement and Excel output, and the triage against the known answers in the mock data. GitHub Actions runs them on Python 3.10, 3.12 and 3.15 for every push.
 
 ## How to run
 
