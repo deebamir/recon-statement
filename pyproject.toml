@@ -8,6 +8,9 @@ version = "0.1.0"
 requires-python = ">=3.10"
 dependencies = ["openpyxl>=3.1", "pandas>=2.2"]
 
+[project.scripts]
+recon-statement = "recon_statement.cli:main"
+
 [tool.setuptools.packages.find]
 where = ["src"]
 

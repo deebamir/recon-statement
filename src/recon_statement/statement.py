@@ -122,17 +122,17 @@ def add_line(ws, text, pence=None, bold=False):
         cell.font = Font(bold=bold)
 
 
-def write_excel(statement, path, terms_name):
+def write_excel(statement, path, terms_name, period_end=PERIOD_END):
     words = TERMS[terms_name]
     wb = Workbook()
     ws = wb.active
     ws.title = "Reconciliation"
-    ws.column_dimensions["A"].width = 62
+    ws.column_dimensions["A"].width = 75
     ws.column_dimensions["B"].width = 16
 
     add_line(ws, words["title"], bold=True)
     add_line(ws, "MOCK DATA: MOCK Demo Trading Ltd (a made-up company)")
-    add_line(ws, f"As at {PERIOD_END.strftime('%d %B %Y')}")
+    add_line(ws, f"As at {period_end.strftime('%d %B %Y')}")
     ws.append([])
 
     add_line(ws, "A. Cashbook side", bold=True)
